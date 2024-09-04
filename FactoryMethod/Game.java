@@ -6,7 +6,7 @@ public class Game {
     public static void main(String[] args) {
         Game game = new Game();
 
-        Map cityMap = game.createMap("city");
+        Map cityMap = game.createMap("wilderness");
 
         cityMap.display(5, 5);        
     }
