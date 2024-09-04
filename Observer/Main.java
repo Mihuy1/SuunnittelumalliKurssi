@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         ArrayList<Observer> observers = new ArrayList<>();
-        WeatherStation weatherStation = new WeatherStation(new Random().nextInt(15), observers);
+        WeatherStation weatherStation = new WeatherStation(new Random().nextInt(25), observers);
 
         WeatherObserver observer1 = new WeatherObserver("Observer 1");
         WeatherObserver observer2 = new WeatherObserver("Observer 2");

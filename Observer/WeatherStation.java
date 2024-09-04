@@ -14,9 +14,6 @@ public class WeatherStation extends Thread {
     private static final int MIN_TEMPERATURE = 0;
     private static final int MAX_TEMPERATURE = 25;
 
-    private static final int MIN_DELAY = 1000;
-    private static final int MAX_DELAY = 5000;
-
     public WeatherStation(int currentTemperature, ArrayList<Observer> observers) {
         this.currentTemperature = currentTemperature;
         this.observers = observers;
@@ -52,16 +49,14 @@ public class WeatherStation extends Thread {
        }
        notifyObservers(currentTemperature);
 
-        int randomDelay = rand.nextInt(MAX_DELAY) + MIN_DELAY;
+        int randomDelay = rand.nextInt(5) + 1;
 
         try {
-            System.out.println("Delay started, with delay " + randomDelay);
+            System.out.println("Delay started: " + randomDelay + " seconds");
             Thread.sleep(randomDelay * 1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-
-        System.out.println("Delay finished");
 
     }
 
