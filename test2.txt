@@ -1,0 +1,6 @@
+Another simulation started
+Again, processing data...
+Simulation ended
+Another simulation started
+Again, processing data...
+Simulation ended
