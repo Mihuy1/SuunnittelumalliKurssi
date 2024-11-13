@@ -19,5 +19,5 @@ public class SizeCalculatorVisitor implements FileSystemVisitor {
     public int getTotalSize() {
         return totalSize;
     }
-    
+
 }

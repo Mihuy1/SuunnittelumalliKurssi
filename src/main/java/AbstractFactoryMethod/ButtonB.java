@@ -2,7 +2,6 @@ package AbstractFactoryMethod;
 
 public class ButtonB extends Button {
 
-    
     public ButtonB(String text) {
         this.text = text;
     }
@@ -17,5 +16,5 @@ public class ButtonB extends Button {
         System.out.println("| " + buttonText + " |");
         System.out.println(line);
     }
-    
+
 }

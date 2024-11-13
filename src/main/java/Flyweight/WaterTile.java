@@ -1,10 +1,19 @@
 package Flyweight;
 
+import javafx.scene.image.Image;
+
 public class WaterTile implements Tile {
+
+    private final String IMAGE_PATH = "/images/water.png";
 
     @Override
     public char getCharacter() {
         return 'W';
+    }
+
+    @Override
+    public Image getImage() {
+        return new Image(IMAGE_PATH, 25, 25, false, false);
     }
 
     @Override

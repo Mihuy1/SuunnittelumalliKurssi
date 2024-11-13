@@ -1,10 +1,10 @@
 package Flyweight;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -15,19 +15,13 @@ public class JavaFXApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Hello World!");
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+        primaryStage.setTitle("Tile Map");
 
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+        Map cityMap = new CityMap();
+        GridPane gridPane = cityMap.display(5, 5);
 
         StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        root.getChildren().add(gridPane);
         primaryStage.setScene(new Scene(root, 300, 250));
         primaryStage.show();
     }

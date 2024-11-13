@@ -1,24 +1,28 @@
 package Flyweight;
 
-public class Game {
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
+public class Game extends Application {
     public static void main(String[] args) {
-        Game game = new Game();
-
-        Map cityMap = game.createMap("city");
-
-        cityMap.display(5, 5);
+        launch(args);
     }
 
-    public Map createMap(String str) {
-        switch (str) {
-            case "city":
-                return new CityMap();
-            case "wilderness":
-                return new WildernessMap();
-            default:
-                return null;
-        }
-    }
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("Tile Map");
 
+        Map cityMap = new CityMap();
+        GridPane gridPane = cityMap.display(5, 5);
+
+        StackPane root = new StackPane();
+        root.getChildren().add(gridPane);
+        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.show();
+    }
 }
