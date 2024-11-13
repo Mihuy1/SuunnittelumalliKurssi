@@ -1,6 +1,5 @@
 package Bridge;
 
-
 import Bridge.devices.Device;
 import Bridge.devices.Radio;
 import Bridge.devices.Tv;
