@@ -1,14 +1,13 @@
 package Flyweight;
 
-
 public class Game {
 
     public static void main(String[] args) {
         Game game = new Game();
 
-        Map cityMap = game.createMap("wilderness");
+        Map cityMap = game.createMap("city");
 
-        cityMap.display(5, 5);        
+        cityMap.display(5, 5);
     }
 
     public Map createMap(String str) {
@@ -21,5 +20,5 @@ public class Game {
                 return null;
         }
     }
-    
+
 }
