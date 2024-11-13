@@ -10,10 +10,9 @@ public class AccessControlService {
     public static AccessControlService getInstance() {
         if (instance == null)
             instance = new AccessControlService();
-        
+
         return instance;
     }
-
 
     public boolean isAllowed(int documentId, User user) {
         for (String username : allowedUsers.keySet()) {
