@@ -3,21 +3,20 @@ package Flyweight;
 import java.util.Random;
 
 public class WildernessMap extends Map {
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @Override
-    public Tile createTile() {
-        int rand = random.nextInt(3);
-
+    public String getTileType() {
+        int rand = random.nextInt(3); // Generates 0, 1, or 2
         switch (rand) {
             case 0:
-                return TileGraphicFactory.getTile("swamp");
+                return "swamp";
             case 1:
-                return TileGraphicFactory.getTile("forest");
+                return "forest";
             case 2:
-                return TileGraphicFactory.getTile("water");
+                return "water";
             default:
-                return null;
+                return "swamp";
         }
     }
 }

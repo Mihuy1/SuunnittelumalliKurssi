@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TileGraphicFactory {
-    static Map<String, Tile> tilesMap = new HashMap<>();
+    private static final Map<String, Tile> tilesMap = new HashMap<>();
 
     public static Tile getTile(String tileType) {
         Tile tile = tilesMap.get(tileType);

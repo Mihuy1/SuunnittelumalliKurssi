@@ -3,8 +3,9 @@ package Flyweight;
 import javafx.scene.image.Image;
 
 public class RoadTile implements Tile {
+    private static final String IMAGE_PATH = "/images/road.png";
+    private static final Image IMAGE = new Image(IMAGE_PATH, 25, 25, false, false);
 
-    private static final String IMAGE_PATH = "/images/road.png"; // Adjust the path as needed
     @Override
     public char getCharacter() {
         return 'R';
@@ -12,12 +13,11 @@ public class RoadTile implements Tile {
 
     @Override
     public Image getImage() {
-        return new Image(IMAGE_PATH, 25, 25, false, false);
+        return IMAGE;
     }
 
     @Override
     public String getType() {
-        return "Road ";
+        return "Road";
     }
-
 }

@@ -3,8 +3,8 @@ package Flyweight;
 import javafx.scene.image.Image;
 
 public class BuildingTile implements Tile {
-
-    private final String IMAGE_PATH = "/images/house.png";
+    private static final String IMAGE_PATH = "/images/house.png";
+    private static final Image IMAGE = new Image(IMAGE_PATH, 25, 25, false, false);
 
     @Override
     public char getCharacter() {
@@ -13,12 +13,11 @@ public class BuildingTile implements Tile {
 
     @Override
     public Image getImage() {
-        return new Image(IMAGE_PATH, 25, 25, false, false);
+        return IMAGE;
     }
 
     @Override
     public String getType() {
-        return "Building ";
+        return "Building";
     }
-    
 }

@@ -48,7 +48,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <mainClass>Flyweight.Game</mainClass> <!-- Replace with your main class -->
+                    <mainClass>Flyweight.JavaFXApp</mainClass> <!-- Replace with your main class -->
                     <arguments>
                         <argument>--module-path</argument>
                         <argument>${java.home}/lib</argument>

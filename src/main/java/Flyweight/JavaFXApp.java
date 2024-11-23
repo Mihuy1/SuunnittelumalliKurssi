@@ -18,7 +18,7 @@ public class JavaFXApp extends Application {
         primaryStage.setTitle("Tile Map");
 
         Map cityMap = new CityMap();
-        GridPane gridPane = cityMap.display(5, 5);
+        GridPane gridPane = cityMap.display(1000, 1000);
 
         StackPane root = new StackPane();
         root.getChildren().add(gridPane);
