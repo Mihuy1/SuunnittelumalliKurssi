@@ -20,3 +20,4 @@
 - [Bridge](src/main/java/Bridge)
 - [Flyweight](src/main/java/Flyweight)
 - [Prototype](src/main/java/Prototype)
+- [Iterator](src/main/java/Iterator)
