@@ -21,3 +21,4 @@
 - [Flyweight](src/main/java/Flyweight)
 - [Prototype](src/main/java/Prototype)
 - [Iterator](src/main/java/Iterator)
+- [Facade](src/main/java/Facade)
